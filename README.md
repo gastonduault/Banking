@@ -4,7 +4,7 @@
 </br>
 
 ## Maquette
-<a href="Maquette\ Banking.pdf">maquettes.pdf</a>
+<a href="Maquette Banking.pdf">maquettes.pdf</a>
 <p>Les maquettes ont été réalisées sur Figma</p>
 <br/>
 
