@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="35.0" layoutY="23.0" prefHeight="35.0" prefWidth="355.0" text="Votre mot de passe doit contenir" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="34.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="95.0" text="Une majuscule" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="130.0" text="Une minuscule" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="161.0" text="Un caractère spécial (? / , . ! * ... )" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="242.0" text="Un chiffre" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="660.0" stylesheets="@../styles/Styles.css">
+         <children>
+            <ImageView layoutX="19.0" layoutY="17.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@../images/croix.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="193.0" layoutY="19.0" text="Nom d'utilisateur" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="192.0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="223.0" layoutY="150.0" text="Mot de passe" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="222.0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <PasswordField alignment="CENTER" layoutX="181.0" layoutY="212.0" promptText="Mot de passe" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="181.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </PasswordField>
+            <TextField alignment="CENTER" layoutX="181.0" layoutY="81.0" promptText="Nom d'utilisateur" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="181.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Button layoutX="252.0" layoutY="290.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="158.0" styleClass="BTNConnexion" text="Se connecter" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

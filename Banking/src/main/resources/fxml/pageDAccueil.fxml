@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane fx:id="pageAcceuil" layoutX="10.0" layoutY="10.0" prefHeight="724.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <GridPane prefHeight="419.0" prefWidth="130.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="flecheGauche" fitWidth="84.0" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@../images/flecheGauche.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </left>
+         <right>
+            <GridPane prefHeight="419.0" prefWidth="130.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="flecheDroite" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@../images/flecheDroite.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </right>
+         <bottom>
+            <GridPane prefHeight="169.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="109.0" prefWidth="109.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="954.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="109.0" prefWidth="109.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BTNInscriptionAcceuil" prefHeight="61.0" prefWidth="245.0" styleClass="BTNInscriptionAcceuil" text="S'INSCRIRE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BTNConnexionAcceuil" prefHeight="21.0" prefWidth="227.0" styleClass="BTNInscriptionAcceuil" text="SE CONNECTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#BTNQuitterPageAcceuil" prefHeight="44.0" prefWidth="117.0" styleClass="btn-quitter-inscription" text="QUITTER" textFill="WHITE" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </bottom>
+         <center>
+            <GridPane prefHeight="393.0" prefWidth="1020.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="288.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="txtCaroussel" styleClass="text" text="Bienvenue sur Banking ! Appuie sur les flèches pour en apprendre plus sur notre application" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="805.0" spacing="25.0" GridPane.rowIndex="1">
+                     <children>
+                        <Circle fx:id="rond1" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="rond2" fill="#f4f4f4" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="rond3" fill="#f4f4f4" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="rond4" fill="#f4f4f4" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </GridPane.margin>
+                  </HBox>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <GridPane prefHeight="211.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="188.0" minHeight="155.0" prefHeight="155.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <GridPane prefHeight="146.0" prefWidth="1280.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="431.5" />
+                        <ColumnConstraints hgrow="NEVER" maxWidth="76.0" minWidth="76.0" prefWidth="76.0" />
+                        <ColumnConstraints hgrow="NEVER" maxWidth="341.0" minWidth="341.0" prefWidth="341.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="431.5" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="text" text="Banking" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="96.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="text" text="Garder un oeil sur vos dépenses." GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Label styleClass="text" text="Bienvenue sur Banking !" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </top>
+      </BorderPane>
+      <VBox fx:id="PageConnexion" alignment="CENTER" focusTraversable="true" layoutX="324.0" layoutY="174.0" styleClass="OngletConnexion" visible="false">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="660.0" stylesheets="@../styles/Styles.css">
+               <children>
+                  <ImageView fx:id="CroixConnexion" layoutX="19.0" layoutY="17.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                     <image>
+                        <Image url="@../images/croix.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="193.0" layoutY="19.0" text="Nom" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="192.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="223.0" layoutY="150.0" text="Mot de passe" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="222.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="saisiMotDePasse" alignment="CENTER" layoutX="181.0" layoutY="212.0" promptText="Mot de passe" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="181.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="saisiNomUtilisateur" alignment="CENTER" layoutX="181.0" layoutY="81.0" promptText="Nom d'utilisateur" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="181.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="BTNseConnecter" layoutX="252.0" layoutY="290.0" mnemonicParsing="false" onAction="#Connexion" prefHeight="44.0" prefWidth="158.0" styleClass="BTNConnexion" text="Se connecter" textFill="WHITE">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="messageErreurConnexion" layoutX="261.0" layoutY="263.0" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720" minWidth="1280" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="7.0" layoutY="154.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" styleClass="tab-header-background" stylesheets="@../styles/Styles.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="154.0">
+        <tabs>
+          <Tab fx:id="tabBord" text="Tableau de bord">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="432.0" layoutY="14.0" prefHeight="70.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" prefWidth="250.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="777.0" minWidth="10.0" prefWidth="740.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="250.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Solde du compte :" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="montantSolde" contentDisplay="CENTER" text="null" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="135.0" layoutY="144.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                        <GridPane layoutX="301.0" layoutY="172.0" prefHeight="388.0" prefWidth="1280.0" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="565.0" prefWidth="565.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="715.0" prefWidth="715.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <children>
+                                    <VBox layoutX="6.0" layoutY="7.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <GridPane hgap="60.0" prefHeight="67.0" prefWidth="545.0" vgap="10.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="bDepenseBord" alignment="CENTER" contentDisplay="CENTER" maxWidth="200.0" mnemonicParsing="false" onAction="#bDepenseBordOnAction" prefWidth="150.0" styleClass="bSelectionne" text="Dépenses" textOverrun="LEADING_ELLIPSIS" GridPane.halignment="RIGHT" />
+                                                <Button fx:id="bRevenuBord" alignment="CENTER" contentDisplay="CENTER" maxWidth="200.0" mnemonicParsing="false" onAction="#bRevenuBordOnAction" prefWidth="150.0" styleClass="bNonSelectionne" text="Revenus" textOverrun="LEADING_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane alignment="CENTER" VBox.vgrow="ALWAYS">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label fx:id="lInfoTypeOperation" alignment="CENTER" prefHeight="40.0" prefWidth="389.0" text="Vos dépenses de cette semaine" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets top="20.0" />
+                                             </padding>
+                                          </GridPane>
+                                          <PieChart fx:id="diagTabBord" maxHeight="600.0" prefHeight="300.0" prefWidth="545.0">
+                                             <VBox.margin>
+                                                <Insets bottom="15.0" top="10.0" />
+                                             </VBox.margin>
+                                          </PieChart>
+                                          <GridPane prefHeight="30.0" prefWidth="300.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="bSemaineBord" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#bSemaineBordOnAction" styleClass="bSelectionne" text="Cette semaine" textOverrun="LEADING_ELLIPSIS" GridPane.columnIndex="0" GridPane.halignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets right="-30.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="bMoisBord" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#bMoisBordOnAction" styleClass="bNonSelectionne" text="Ce mois" textOverrun="LEADING_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                                <Button fx:id="bAnneeBord" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#bAnneeBordOnAction" styleClass="bNonSelectionne" text="Cette année" textOverrun="LEADING_ELLIPSIS" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets left="-30.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <ListView fx:id="listeBord" GridPane.columnIndex="1">
+                                 <padding>
+                                    <Insets left="15.0" right="15.0" />
+                                 </padding>
+                              </ListView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabBudget" text="Evolution du budget">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="368.0" prefWidth="905.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="38.0" prefWidth="780.0">
+                                 <children>
+                                    <Button fx:id="bDepenseEvo" alignment="CENTER" maxWidth="300.0" mnemonicParsing="false" onAction="#bDepenseEvoOnAction" styleClass="bSelectionne" text="Dépenses" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="bRevenuEvo" maxWidth="300.0" mnemonicParsing="false" onAction="#bRevenuEvoOnAction" styleClass="bNonSelectionne" text="Revenus" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Hyperlink alignment="CENTER" maxWidth="100.0" prefHeight="50.0" prefWidth="80.0" text="2019" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="60.0" top="-2.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink alignment="CENTER" contentDisplay="CENTER" maxWidth="100.0" prefHeight="50.0" prefWidth="80.0" text="2020" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="-2.0" />
+                                       </HBox.margin>
+                                    </Hyperlink>
+                                    <Hyperlink alignment="CENTER" maxWidth="100.0" prefHeight="50.0" prefWidth="80.0" text="2021" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="-2.0" />
+                                       </HBox.margin>
+                                    </Hyperlink>
+                                    <Button fx:id="bSemaineEvo" alignment="CENTER" maxWidth="300.0" mnemonicParsing="false" onAction="#bSemaineEvoOnAction" styleClass="bSelectionne" text="En semaine" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="bMoisEvo" maxWidth="300.0" mnemonicParsing="false" onAction="#bMoisEvoOnAction" styleClass="bNonSelectionne" text="En mois" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="bAnneeEvo" maxWidth="300.0" mnemonicParsing="false" onAction="#bAnneeEvoOnAction" styleClass="bNonSelectionne" text="En année" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <StackedBarChart fx:id="diagEvo">
+                                <xAxis>
+                                  <CategoryAxis fx:id="axeCategorie" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="axeNombre" side="LEFT" />
+                                </yAxis>
+                                 <VBox.margin>
+                                    <Insets bottom="60.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </StackedBarChart>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabPeriode" text="Résultat par période">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="368.0" prefWidth="905.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="38.0" prefWidth="780.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Hyperlink alignment="CENTER" maxWidth="100.0" prefHeight="50.0" prefWidth="80.0" text="2019" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="60.0" top="-2.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink alignment="CENTER" contentDisplay="CENTER" maxWidth="100.0" prefHeight="50.0" prefWidth="80.0" text="2020" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="-2.0" />
+                                       </HBox.margin>
+                                    </Hyperlink>
+                                    <Hyperlink alignment="CENTER" maxWidth="100.0" prefHeight="50.0" prefWidth="80.0" text="2021" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="-2.0" />
+                                       </HBox.margin>
+                                    </Hyperlink>
+                                    <Button fx:id="bSemainePerio" alignment="CENTER" maxWidth="300.0" mnemonicParsing="false" onAction="#bSemainePerioOnAction" styleClass="bSelectionne" text="En semaine" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="bMoisPerio" maxWidth="300.0" mnemonicParsing="false" onAction="#bMoisPerioOnAction" styleClass="bNonSelectionne" text="En mois" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="bAnneePerio" maxWidth="300.0" mnemonicParsing="false" onAction="#bAnneePerioOnAction" styleClass="bNonSelectionne" text="En année" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <StackedBarChart fx:id="diagPerio" VBox.vgrow="ALWAYS">
+                                 <xAxis>
+                                    <CategoryAxis fx:id="axeCatPerio" side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="axeNumPerio" side="LEFT" />
+                                 </yAxis>
+                                 <VBox.margin>
+                                    <Insets bottom="60.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </StackedBarChart>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabTransaction" text="Mes transactions">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="298.0" layoutY="107.0" prefHeight="525.6" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Solde du compte :" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="montantSolde1" contentDisplay="CENTER" text="null" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="listViewTransactions" prefHeight="358.0" prefWidth="1280.0" VBox.vgrow="SOMETIMES">
+                                 <VBox.margin>
+                                    <Insets bottom="60.0" left="80.0" right="80.0" />
+                                 </VBox.margin>
+                              </ListView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <GridPane layoutY="5.0" prefHeight="146.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="431.5" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="76.0" minWidth="76.0" prefWidth="76.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="341.0" minWidth="341.0" prefWidth="341.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="431.5" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="text" text="Banking" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label styleClass="text" text="Garder un oeil sur vos dépenses." GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Button fx:id="bQuitter" mnemonicParsing="false" onAction="#bQuitterOnAction" styleClass="bQuitter" text="Quitter" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" />
+      <Hyperlink fx:id="bProfil" onAction="#bProfilOnAction" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="51.0">
+               <image>
+                  <Image url="@../images/iconeUtilisateur.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Hyperlink>
+      <VBox fx:id="pageModifSeuil" alignment="CENTER" layoutX="750.0" layoutY="365.0" prefHeight="199.0" prefWidth="385.0" visible="false">
+         <children>
+            <HBox prefHeight="36.0" prefWidth="204.0">
+               <children>
+                  <Label fx:id="LabelpageModif" prefHeight="36.0" prefWidth="226.0" text="Seuil de la catégorie">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CategoriePageModif" prefHeight="36.0" prefWidth="126.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+               <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="350.0" spacing="25.0">
+               <children>
+                  <ImageView fx:id="flecheRetour_pageModifSeuil" fitHeight="36.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flecheRetour.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="slider_pageModifSeuil">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Slider>
+                  <TextField fx:id="TextField_pageModifSeuil" prefHeight="25.0" prefWidth="76.0" text="00.00" />
+               </children>
+            </HBox>
+            <Label fx:id="MessageErreurSeuil" textFill="RED" />
+            <Button fx:id="BTNValiderSeuil" mnemonicParsing="false" prefHeight="29.0" prefWidth="75.0" text="Valider" />
+         </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <AnchorPane fx:id="paneProfil" layoutX="35.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="255.0" styleClass="profil" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="bProfilDeco" layoutX="166.0" layoutY="85.0" mnemonicParsing="false" onAction="#bProfilDecoOnAction" prefHeight="31.0" prefWidth="230.0" styleClass="bProfilOuvert" text="Se déconnecter" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+               <font>
+                  <Font size="5.0" />
+               </font></Button>
+            <Button fx:id="bProfilAcceder" ellipsisString="" layoutX="164.0" layoutY="136.0" mnemonicParsing="false" onAction="#bProfilAccederOnAction" prefHeight="31.0" prefWidth="230.0" styleClass="bProfilOuvert" text="Accéder à mon profil" textOverrun="CLIP" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button fx:id="bProfilPref" ellipsisString="" layoutX="165.0" layoutY="186.0" mnemonicParsing="false" onAction="#bProfilPrefOnAction" prefHeight="31.0" prefWidth="230.0" styleClass="bProfilOuvert" text="Mes préférences" textOverrun="CLIP" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="180.0">
+               <font>
+                  <Font size="7.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <Hyperlink fx:id="bPlus" onAction="#bPlusOnAction" prefHeight="30.0" prefWidth="30.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../images/boutonAjoutOperation.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Hyperlink>
+      <AnchorPane fx:id="panePlus" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="386.0" styleClass="paneAjoutOp" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Hyperlink fx:id="bPlusRetour" layoutX="313.0" layoutY="12.0" onAction="#bPlusRetourOnAction" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../images/boutonCroix.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Hyperlink>
+            <Button fx:id="bPlusAjouterOp" layoutX="102.0" layoutY="17.0" mnemonicParsing="false" onAction="#bPlusAjouterOpOnAction" prefWidth="194.0" styleClass="bAjoutOperation" text="Ajouter une opération" AnchorPane.rightAnchor="80.0" />
+         </children>
+      </AnchorPane>
+      <Hyperlink fx:id="refresh" onAction="#refreshOnAction">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/recharger.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Hyperlink>
+   </children>
+</AnchorPane>
